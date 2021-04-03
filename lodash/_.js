@@ -32,34 +32,26 @@ const _ = {
     const temp = str1.split(" ");
     return temp;
     
-  }, 
-  pad(str1, len) {
-    if (len < str1.length) {
-      return str1;
-    } else if (len === str1.length) {
-      return str1;
-    } else {
-      const temp = len - str1.length;
-      if (temp % 2 === 0) {
-        let str2 = '';
-        for (let i = 0; i < temp; i+=2) {
-          str2 = ' ' + str1 + ' ';
-        }
-      } else {
-        let str3 = '';
-        for (let i = 0; i < temp; i+=2) {
-            str3 = ' ' + str1 + ' ';
-        }
-        str3 = str1 + ' ';
-        return str3;
-        }
-    }
+  },
+   pad (string, length){
+    if (length <= string.length){
+      return string;
+    };
+    const addToB = Math.floor((length - string.length) / 2);
+    const addToE = length - string.length - addToB;
+    const paddedString = ' '.repeat(addToB) + string + ' '.repeat(addToE);
+
+    return paddedString;
    
     }, 
     has(obj, key) {
-      if (obj.key === 'undefined') {
+      if (obj.key === undefined) {
         return false;
-      } 
+      } else if (obj.hasOwnProperty(key)) {
+	      return true;
+      } else {
+	      return false;
+      }
       return true;
     }, 
     invert(obj) {
