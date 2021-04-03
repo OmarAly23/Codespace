@@ -6,6 +6,20 @@ const _ = {
     return clampedValue;
   }, 
   inRange(number, start, end) {
+    if (end === undefined) {
+	    end = start;
+	    start = 0;
+    }
+    if (start > end) {
+	    const temp = start;
+	    start = end;
+	    end = temp;
+    }
+    if (number === start) {
+	    return true;
+    } else if (number === end) {
+	    return false;
+    }
     if (number < start) {
       return false;
     } else if (number > end) {
