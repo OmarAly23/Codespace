@@ -1,5 +1,3 @@
 # JS
-A temporary workspace to practice JavaScript
-This github repo contains JS source code of examples and problems solved by me :)
-# Independant Workspace
- 
+## *A temporary workspace to practice JavaScript, each directory represents a project with its scripts and test cases*
+- Contributed by myself :)
