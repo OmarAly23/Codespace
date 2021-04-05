@@ -1,10 +1,12 @@
 
 const _ = {
+  // writing the clamp method
   clamp(number, lower, upper) {
     const lowerClampedValue = Math.max(number, lower);
     const clampedValue = Math.min(lowerClampedValue, upper);
     return clampedValue;
   }, 
+  // writing the in range method
   inRange(number, start, end) {
     if (end === undefined) {
 	    end = start;
@@ -28,11 +30,13 @@ const _ = {
       return true;
     }
   }, 
+  // splitting a string into words
   words(str1) {
     const temp = str1.split(" ");
     return temp;
     
   },
+  // a function for pad, which basically adds padding to strings
    pad (string, length){
     if (length <= string.length){
       return string;
@@ -44,6 +48,7 @@ const _ = {
     return paddedString;
    
     }, 
+    // return true if an object has a key, false otherwise
     has(obj, key) {
       if (obj.key === undefined) {
         return false;
@@ -54,6 +59,8 @@ const _ = {
       }
       return true;
     }, 
+    // a method for inverting an object
+    // replace the values of keys with keys and vice versa
     invert(obj) {
       let invertedObject = {}
       for (var key in obj) {
@@ -61,6 +68,8 @@ const _ = {
       }
       return invertedObject;
     }, 
+    // return key if it exists in the object
+    // undefined otherwise
     findKey(obj, predicate) {
       for (var key in obj) {
         const value = obj.key;
@@ -71,6 +80,8 @@ const _ = {
       }
       return undefined;
     }, 
+    // input: arr && number of items to drop
+    // output: new array with the number of items dropped
     drop(arr, numOfItems) {
       if (numOfItems === undefined) {
         arr.shift();
@@ -89,6 +100,8 @@ const _ = {
       }
       return arr;
     }, 
+    // input: an array with a number representing the size
+    // output: return a set of arrays split from the original array depending on the size given
     chunk(arr, size) {
       if (size === undefined) {
         size = 1;
