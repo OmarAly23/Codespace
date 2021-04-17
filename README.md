@@ -1,3 +1,3 @@
-# JS
-## *A workspace for JavaScript, each directory represents a project with its scripts and test cases*
+# JS 
+## *A workspace for JavaScript each directory represents a project with its scripts*
 - Contributed by myself :)
