@@ -1,0 +1,56 @@
+.Colors, .Fonts, .text-styles{
+    border: 3px solid grey;
+    padding-left: 30px;
+    margin: 0 auto;
+    width: 1000px;
+    margin-top: 10px;
+}
+
+.blue, .pink, .green {
+    display: inline-block;
+    width: 230px;
+    height: 70px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.blue {
+    background-color:#2d5dcc;
+    color: white;
+}
+.pink {
+    background-color: #d957d9;
+}
+.green {
+    background-color: #4fe0b0;
+}
+.beige {
+    display: block;
+    width: 230px;
+    height: 70px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    background-color: #efd9ca;
+}
+
+.First , .Second {
+    display: inline-block;
+}
+.First {
+    font-family: 'Source Code Pro', sans-serif;
+}
+.Second {
+    font-family: 'Nunito Sans', sans-serif;
+}
+.Third {
+    font-family: 'Poppins', sans-serif;
+}
+
+header h2 {
+    margin-left: 440px;
+}
