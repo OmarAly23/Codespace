@@ -2,9 +2,14 @@
 const _ = {
   // writing the clamp method
   clamp(number, lower, upper) {
-    const lowerClampedValue = Math.max(number, lower);
-    const clampedValue = Math.min(lowerClampedValue, upper);
-    return clampedValue;
+	  if (number > lower && number < upper) {
+    		return number;
+  	} 
+	else if (number < lower) {
+    		return lower;
+  	} else if (number > upper) {
+    		return upper;
+  	}
   }, 
   // writing the in range method
   inRange(number, start, end) {
