@@ -33,11 +33,11 @@ class Doctor {
   }
 }
 
-class Nurse {
+class Nurse extends HospitalEmployee {
   constructor(name, certifications) {
-    this._name = name;
+    super(name);
     this._remainingVacationDays = 20;
-    this._certifications = certificaitons;
+    this.certifications = certifications;
   }
   get name() {
     return this._name;
@@ -49,6 +49,13 @@ class Nurse {
     this._remainingVacationDays -= daysOff;
   }
   addCertification(certificaiton) {
-    this._certifications.push(certificaiton);
+    this.certifications.push(certificaiton);
   }
+  
 }
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays);
+nurseOlynyk.addCertification('Genetics');
+console.log(nurseOlynyk.certifications);
