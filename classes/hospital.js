@@ -4,6 +4,9 @@ class HospitalEmployee {
     this._remainingVacationDays = 20;
 
   }
+  static generatePassword() {
+    return Math.floor(Math.random() * 10000);
+  }
     get name() {
     return this._name;
   }
