@@ -11,6 +11,7 @@ class Field {
         this.arr = arr;
         this.x_axis = 0;
         this.y_axis = 0;
+        // Initialization of the character's position
         this.arr[0][0] = pathCharacter;
     }
     
@@ -19,8 +20,8 @@ class Field {
         while (playing) {
             this.print();
             this.changeDirection();
-            if (!this.Bound) { 
-                console.log('Illegal direction');
+            if (!this.Bound()) { 
+                console.log('Illegal direction');                
                 playing = false;
                 break;
             } else if (this.ishole()) {
@@ -32,8 +33,10 @@ class Field {
                 playing = false;
                 break;
             }
+            this.arr[this.y_axis][this.x_axis] = pathCharacter;
         }
-        this.arr[this.y_axis][this.x_axis] = pathCharacter;
+        // Updating the current location on the map
+        
     }
 
 
